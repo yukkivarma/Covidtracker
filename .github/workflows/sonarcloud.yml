@@ -33,7 +33,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}  # Fetches the SonarCloud token from GitHub secrets
         run: |
           mvn clean verify sonar:sonar \
-          -Dsonar.projectKey=<your_project_key> \
-          -Dsonar.organization=<your_organization_key> \
+          -Dsonar.projectKey= yukkivarma_Covidtracker \
+          -Dsonar.organization=yukkivarma \
           -Dsonar.host.url=https://sonarcloud.io \
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
