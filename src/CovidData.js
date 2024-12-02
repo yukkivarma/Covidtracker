@@ -12,7 +12,7 @@ function CovidData() {
   const [userInput, setUserInput] = useState("");
 
   useEffect(() => {
-    fetch("https://disease.sh/v3/covid-19/countries")
+    fetch("https://disease.sh/v3/covid-19/countriess")
       .then((res) => res.json())
       .then((data) => {
         setData(data);
@@ -42,7 +42,7 @@ function CovidData() {
   };
   const handleSubmit = (props) => {
     props.preventDefault();
-    fetch(`https://disease.sh/v3/covid-19/countries/${userInput}`)
+    fetch(`https://disease.sh/v3/covid-19/countriess/${userInput}`)
       .then((res) => res.json())
       .then((data) => {
         setData(data);
